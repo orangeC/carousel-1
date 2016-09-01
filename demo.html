@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="按钮" id="btn">
+	<div id="div1">1,2,3,4</div>
+	<script type="text/javascript">
+	window.onload=function(){
+		var oDiv = document.getElementById("div1");
+		var oBtn = document.getElementById("btn");
+		var arr = [];
+		oBtn.onclick=function(){
+			arr = oDiv.innerHTML.split(",");
+			arr.unshift( arr[arr.length - 1]) ;
+			arr.pop();
+			oDiv.innerHTML = arr
+		}
+	}
+	</script>
+</body>
+</html>
