@@ -1,2 +1,2 @@
 # carousel-1
-first carousel demo
+first carousel demo js practice
