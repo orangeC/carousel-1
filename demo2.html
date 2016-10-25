@@ -21,10 +21,10 @@
 		var aBtn = document.getElementsByTagName('input');
 		var aDiv = document.getElementsByTagName('div');
 		var arr = [];
-		for(var i =0;i<aDiv.length;i++){
-			arr.push( [getStyle(aDiv[i],"left"),getStyle(aDiv[i],"top")] );
+	for(var i =0;i<aDiv.length;i++){
+		arr.push( [getStyle(aDiv[i],"left"),getStyle(aDiv[i],"top")] );
 
-		}
+	}
 		aBtn[0].onclick=function(){
 			arr.push( arr[0] );
 			arr.shift();
