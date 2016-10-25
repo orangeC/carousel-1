@@ -1,2 +1,2 @@
 # carousel-1
-first carousel 
+first carousel demo
