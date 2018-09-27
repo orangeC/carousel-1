@@ -5,20 +5,34 @@
 	<title>Document</title>
 </head>
 <body>
+	<input type="button" value="测试" id="Btn">
 	<input type="button" value="按钮" id="btn">
 	<div id="div1">1,2,3,4</div>
+	<div id="div2">5,6,7,8</div>
 	<script type="text/javascript">
 	window.onload=function(){
 		var oDiv = document.getElementById("div1");
+		var oDiv2 = document.getElementById("div2");
 		var oBtn = document.getElementById("btn");
 		var arr = [];
 		oBtn.onclick=function(){
 			arr = oDiv.innerHTML.split(",");
 			arr.unshift( arr[arr.length - 1]) ;
 			arr.pop();
-			oDiv.innerHTML = arr
+
+			oDiv.innerHTML = arr;
 		}
 	}
+	// window.onload=function(){
+	// 	var oDiv = document.getElementById("Btn");
+	// 	var vale = 0;
+	// 	oDiv.onclick=function(){
+	// 		vale = vale + 1 ;
+
+	// 		console.log(vale);
+	// 		console.log(typeof vale)
+	// 	}
+	// }
 	</script>
 </body>
 </html>
