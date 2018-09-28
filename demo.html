@@ -3,12 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<style type="text/css">
+		img{
+			display: block;
+		    height:100px;
+		    width:100px;
+		    transition: 1s height ,1s 1s width ease-in;
+		}
+
+		img:hover{
+		    height: 450px;
+		    width: 450px;
+		}
+	</style>
 </head>
 <body>
 	<input type="button" value="测试" id="Btn">
 	<input type="button" value="按钮" id="btn">
 	<div id="div1">1,2,3,4</div>
 	<div id="div2">5,6,7,8</div>
+	<img src="images/sidebar-3.jpg">
 	<script type="text/javascript">
 	window.onload=function(){
 		var oDiv = document.getElementById("div1");
