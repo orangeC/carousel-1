@@ -195,23 +195,33 @@ function reverseString(str) {
 reverseString("hello");
 
 
-//
+//循环表达阶乘函数
 function factorialize(num) {
   // 请把你的代码写在这里
   if(num<0){
-  	console.log(-1)
   }else if(num == 0 || num == 1){
-  	console.log(1)
   }else{
   	for(i=num-1;i>=1;i--){
   		num*= i;
   	}
   }
-  console.log(num)
-  // return num;
 }
 
 factorialize(20);
+
+//递归表达阶乘
+function factorialize(num) {
+  // 请把你的代码写在这里
+  if(num<=1){
+    return 1;
+  }else{
+    return num*factorialize(num-1);
+  }
+    //return num>1 ? num*factorialize(num-1) : 1 ;
+}
+
+factorialize(5);
+
 
 
 	</script>
