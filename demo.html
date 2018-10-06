@@ -240,6 +240,41 @@ function palindrome(str) {
 
 palindrome("A man, a plan, a canal. Panama");
 
+//在句子中找出最长的单词，并返回它的长度。
+
+// function findLongestWord(str) {
+  // 请把你的代码写在这里
+  // var aStr = [];
+  // var oStr = str.split(" ");
+  // for(i=0;i<oStr.length;i++){
+  // 	aStr.push(oStr[i].length);
+  // }
+  // console.log(aStr);
+
+  // aStr = aStr.sort(function(b,a){      //数组排序从小到大sort
+  //  	return b-a;
+  // })
+  // return aStr[aStr.length-1]
+// }
+// 
+// findLongestWord("The quick brown fox jumped over the lazy dog");
+
+function findLongestWord(str) {
+  // 请把你的代码写在这里
+  var max = 0;
+  var temp;
+  var oStr = str.split(" ");
+  for(i=0;i<oStr.length;i++){
+    temp = oStr[i].length;
+    if(temp>max){
+    	max = temp;
+    }
+  }
+  console.log(max);
+}
+
+findLongestWord("The quick brown fox jumped over the lazy dog");
+
 
 
 	</script>
