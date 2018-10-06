@@ -184,7 +184,7 @@ function randomRange(myMin, myMax) {
 // 你可以修改这一行来测试你的代码
 var myRandom = randomRange(5, 15);
 
-// reverse a string
+// reverse a string翻转字符串
 function reverseString(str) {
   // 请把你的代码写在这里
   var arrR = "";
@@ -221,6 +221,24 @@ function factorialize(num) {
 }
 
 factorialize(5);
+
+//检测回文字符
+function palindrome(str) {
+  // 请把你的代码写在这里
+  var arr = "";
+  var NewString = str.replace(/[\ |\~|\`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\-|\_|\+|\=|\||\\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?]/g,"");//正则过滤各种标点符号空格
+  var oNew = NewString.toLowerCase();//转换大小写
+  arr = oNew.split("").reverse().join("");//翻转字符串
+  if(arr == oNew){                         //比较
+    console.log(true) ;
+  }else{
+    console.log(false);
+  }
+}
+
+
+
+palindrome("A man, a plan, a canal. Panama");
 
 
 
