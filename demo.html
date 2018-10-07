@@ -276,6 +276,28 @@ function findLongestWord(str) {
 findLongestWord("The quick brown fox jumped over the lazy dog");
 
 
+//字符串中每个单词首字母大写
+function titleCase(str) {
+  // 请把你的代码写在这里
+  var arr = [];
+  var oStr = str.split(" ");
+  for(i=0;i<oStr.length;i++){
+    oStr[i]=oStr[i].slice(0,1).toUpperCase()+oStr[i].slice(1);  //slice截取字符串进行操作
+
+  }
+  console.log(oStr.join(" "))
+
+}
+//数组+map
+//function titleCase3(s) {  
+    // return s.toLowerCase().split(/\s+/).map(function(item, index) {  
+        // return item.slice(0, 1).toUpperCase() + item.slice(1);  
+    // }).join(' ');  
+// }  
+// console.log(titleCase3(a));
+
+titleCase("I'm a little tea pot");
+
 
 	</script>
 </body>
