@@ -362,6 +362,20 @@ function truncate(str, num) {
 
 truncate("A-tisket a-tasket A green and yellow basket", 11);
 
+
+//把一个数组arr按照指定的数组大小size分割成若干个数组块
+function chunk(arr, size) {
+  // 请把你的代码写在这里
+  var oArr= [];
+  for(i=0;i<arr.length;i+=size){
+    oArr.push(arr.slice(i,i+size));
+  }
+  return oArr;
+}
+
+chunk(["a", "b", "c", "d","e"], 2);
+
 	</script>
+}
 </body>
 </html>
