@@ -270,7 +270,6 @@ function findLongestWord(str) {
     	max = temp;
     }
   }
-  console.log(max);
 }
 
 findLongestWord("The quick brown fox jumped over the lazy dog");
@@ -297,6 +296,23 @@ function titleCase(str) {
 // console.log(titleCase3(a));
 
 titleCase("I'm a little tea pot");
+
+//取出数组中的Max值放入新的数组
+function largestOfFour(arr) {
+  var oArr = [];
+  // 请把你的代码写在这里
+  for(i=0;i<arr.length;i++){
+  	// for(j=0;j<arr[i].length-1;j++){
+  		arr[i].sort(function(b,a){          //sort函数从大到小排序函数
+  			return a-b;
+  		})
+  		oArr.push(arr[i][0]);  //第一位最大数取出放入新数组
+  	// }
+  }
+  
+}
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
 
 
 	</script>
