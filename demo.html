@@ -315,6 +315,35 @@ function largestOfFour(arr) {
 largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
 
 
+//检查字符串结尾
+
+//判断一个字符串(str)是否以指定的字符串(target)结尾。
+function confirmEnding(str, target) {
+  if(target.length>1){
+    if(str.substr(-target.length) == target){    //substr() 方法返回一个字符串中从指定位置开始到指定字符数的字符
+      return true ;
+    }else{
+      return false;
+    }
+  }else{
+    if(str.substr(-1,1) == target){
+      return true;
+    }else{
+      return false;
+    }
+  }
+}
+//缩写版
+// function confirmEnding(str, target) {
+//   if(target.length>1){
+//     return str.substr(-target.length) == target ? true : false ;
+//   }else{
+//     return str.substr(-1,1) == target ? true : false ;
+//   }
+// }
+
+confirmEnding("Bastian er", "neee");
+
 	</script>
 </body>
 </html>
