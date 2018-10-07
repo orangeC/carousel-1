@@ -80,7 +80,6 @@
 // // 深拷贝 collection，用于测试
 // var collectionCopy = JSON.parse(JSON.stringify(collection));
 
-// // 请只修改这条注释以下的代码
 // function update(id, prop, value) {
 //   if (prop == "tracks" && value) {
 //     collection[id][prop].push(value);
@@ -92,7 +91,6 @@
 //   return collection;
 // }
 
-// // 你可以修改这一行来测试你的代码
 // update(5439, "artist", "ABBA");
 
 
@@ -100,17 +98,14 @@
 // 一 、循环 计算数组的乘积
 // function multiplyAll(arr) {
 //   var product = 1;
-//   // 请把你的代码写在这条注释以下
 //   for (var i=0; i < arr.length; i++) {
 //   for (var j=0; j < arr[i].length; j++) {
 //     product = product*arr[i][j];
 //   }
 // }
-//   // 请把你的代码写在这条注释以上
 //   return product;
 // }
 
-// // 你可以修改这一行来测试你的代码
 // multiplyAll([[1,2],[3,4],[5,6,7]]);
 
 
@@ -146,21 +141,15 @@ var contacts = [
 
 
 function lookUp(firstName, prop){
-// 请把你的代码写在这条注释以下
 for (i = 0; i < contacts.length; i++) {
     if (firstName == contacts[i].firstName) {
       if (contacts[i][prop]) {
         console.log( contacts[i][prop]);
       }
-        console.log( "No such property");
     }
   }
-    console.log( "No such contact");
-
-// 请把你的代码写在这条注释以上
 }
 
-// 你可以修改这一行来测试你的代码
 lookUp("Kristian", "lastName");
 
 //二、在两个指定的数之间生成随机数
@@ -173,8 +162,6 @@ function ourFunction(ourMin, ourMax) {
 
 ourFunction(1, 9);
 
-// 请把你的代码写在这条注释以下
-
 function randomRange(myMin, myMax) {
 
  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin; // 请修改这一行
@@ -186,7 +173,6 @@ var myRandom = randomRange(5, 15);
 
 //三、 reverse a string翻转字符串
 function reverseString(str) {
-  // 请把你的代码写在这里
   var arrR = "";
   arrR = str.split("").reverse().join("");
   return arrR;
@@ -197,7 +183,6 @@ reverseString("hello");
 
 //四、循环表达阶乘函数
 function factorialize(num) {
-  // 请把你的代码写在这里
   if(num<0){
   }else if(num == 0 || num == 1){
   }else{
@@ -209,7 +194,6 @@ function factorialize(num) {
 
 //递归表达阶乘
 function factorialize(num) {
-  // 请把你的代码写在这里
   if(num<=1){
     return 1;
   }else{
@@ -222,7 +206,6 @@ factorialize(5);
 
 //五、检测回文字符
 function palindrome(str) {
-  // 请把你的代码写在这里
   var arr = "";
   var NewString = str.replace(/[\ |\~|\`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\-|\_|\+|\=|\||\\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?]/g,"");//正则过滤各种标点符号空格
   var oNew = NewString.toLowerCase();//转换大小写
@@ -241,7 +224,6 @@ palindrome("A man, a plan, a canal. Panama");
 //六、在句子中找出最长的单词，并返回它的长度。
 
 // function findLongestWord(str) {
-  // 请把你的代码写在这里
   // var aStr = [];
   // var oStr = str.split(" ");
   // for(i=0;i<oStr.length;i++){
@@ -258,7 +240,6 @@ palindrome("A man, a plan, a canal. Panama");
 // findLongestWord("The quick brown fox jumped over the lazy dog");
 
 function findLongestWord(str) {
-  // 请把你的代码写在这里
   var max = 0;
   var temp;
   var oStr = str.split(" ");
@@ -363,6 +344,23 @@ function repeat(str, num) {
 // }
 
 repeat("abc", 3);
+
+//十、截断字符串 如果字符串的长度比指定的参数num长，则把多余的部分用...来表示
+function truncate(str, num) {
+  var astr = str.slice(0,num-3);
+  var bstr = str.slice(0,num);
+  if(num>=str.length){
+    return str;
+  }else{
+    if(num>3){
+        return astr+"...";
+    }else{
+        return bstr+"...";
+    }
+  }
+}
+
+truncate("A-tisket a-tasket A green and yellow basket", 11);
 
 	</script>
 </body>
