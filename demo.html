@@ -409,6 +409,45 @@ function where(arr, num) {
 
 where([40, 60,30], 50);
 
+
+//十四、凯撒密码
+
+//密码中的字母会按照指定的数量来做移位 一个常见的案例就是ROT13密码，字母会移位13个位置。由'A' ↔ 'N', 'B' ↔ 'O'，以此类推。 所有的字母都是大写，不要转化任何非字母形式的字符(例如：空格，标点符号)，遇到这些特殊字符，跳过它们
+function rot13(str) { // LBH QVQ VG!
+	var oStr = "";
+	var arr = str.split("");  // 字符串截断 方便处理
+	for(i=0;i<arr.length;i++){
+		if(arr[i]>= 'A' && arr[i]<='Z'){  // 找出属于A-Z之间的大写字母
+			arr[i] = arr[i].charCodeAt()+13;  //转为ASCII编码 移位置13位
+			if(arr[i]>90){                      // 超过最大字母Z 数字90 处理转为A~Z 、65~90之间的数字
+				arr[i] = arr[i]-90+64;
+			}
+				arr[i] = String.fromCharCode(arr[i]);  //编码转字母
+		}
+
+		oStr += arr[i];   // 添加到新字符串
+	}
+}
+
+
+// function rot13(str) { // LBH QVQ VG!
+//   var  str1 = [];
+//     for (var i = 0; i < str.length; i++ ) {
+//         var num = str[i].charCodeAt();
+//            if(num >= 65 && num <= 77)
+//               	num = num + 13;
+//             else if (num > 77 && num < 91)
+//                 num = num - 13;
+//         str1.push(String.fromCharCode(num));
+//     }
+//     return str1.join("");
+// }
+
+
+
+rot13("SERR PBQR PNZC");  // 你可以修改这一行来测试你的代码
+
+
 	</script>
 }
 </body>
