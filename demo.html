@@ -363,7 +363,7 @@ function truncate(str, num) {
 truncate("A-tisket a-tasket A green and yellow basket", 11);
 
 
-//把一个数组arr按照指定的数组大小size分割成若干个数组块
+//十一、把一个数组arr按照指定的数组大小size分割成若干个数组块
 function chunk(arr, size) {
   // 请把你的代码写在这里
   var oArr= [];
@@ -374,6 +374,25 @@ function chunk(arr, size) {
 }
 
 chunk(["a", "b", "c", "d","e"], 2);
+
+
+//十二、实现一个摧毁(destroyer)函数，第一个参数是待摧毁的数组，其余的参数是待摧毁的值
+
+
+//先把待要摧毁的值组成一个新的数组，这样就可以比较第一个数组和新数组的元素，如果新的数组中不存在，那么这个就是应该要保留的元素，实现的时候需要一个filter()方法和一个indexOf()方法
+function destroyer(arr) {
+  // 请把你的代码写在这里
+  var newArr = [];
+    for(var i = 0; i<arguments.length; i++){
+        newArr.push(arguments[i]);
+    }
+    function notDestroy(item){
+        return newArr.indexOf(item) < 0;
+    }
+    return arr.filter(notDestroy);
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
 
 	</script>
 }
