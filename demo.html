@@ -394,6 +394,21 @@ function destroyer(arr) {
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
 
+
+
+//十三、数组排序并找出元素索引
+//先给数组排序，然后找到指定的值在数组的位置，最后返回位置对应的索引
+function where(arr, num) {
+  // 请把你的代码写在这里
+  arr.push(num);
+  arr = arr.sort(function(b,a){
+    return b-a;
+  });
+  return arr.indexOf(num);
+}
+
+where([40, 60,30], 50);
+
 	</script>
 }
 </body>
