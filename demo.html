@@ -448,6 +448,24 @@ function rot13(str) { // LBH QVQ VG!
 rot13("SERR PBQR PNZC");  // 你可以修改这一行来测试你的代码
 
 
+//我们会传递给你一个包含两个数字的数组。返回这两个数字和它们之间所有数字的和
+function sumAll(arr) {
+  var a=Math.max.apply(null, arr);
+    var b=Math.min.apply(null, arr);
+    var c=[];
+        for(var i=0;b<a+1;i++)
+        {
+          c[i]=b;
+          b++;
+        }
+    var sum = c.reduce(function (a, b){return a + b;}, 0);
+    return sum;
+}
+
+sumAll([1, 4]);
+
+
+
 	</script>
 }
 </body>
