@@ -483,6 +483,19 @@ function diff(arr1, arr2) {
   return newArr;
 }
 
+//function diffArray(arr1, arr2) {
+//   var newArr = [];
+//   // Same, same; but different.
+//   var arr1Diff = arr1.filter((cur) => {
+//     return arr2.indexOf(cur) === -1;
+//   });
+//   var arr2Diff = arr2.filter((cur) => {
+//     return arr1.indexOf(cur) === -1;
+//   });
+//   newArr = arr1Diff.concat(arr2Diff);
+//   return newArr;
+// }
+
 diff([1, 2, 3,4, 5,6], [1, 2, 3, 5,7]);
 
 
